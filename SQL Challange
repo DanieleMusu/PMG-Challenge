@@ -28,12 +28,10 @@ I Believe the most efficient store is brand_ID 1 for CA 0n 1/1/16. The reason wh
 What this indicates that their marketing strategy is very good as they are not spending a lot of money on it which is why they are producing the highest revenue.
 
 
-
 Question #5 (Challenge) Generate a query to rank in order the top 10 revenue producing states​
 
 select
   rank() over(order by revenue desc) as rank,
   dense_rank() over(order by revenue desc) as dense_rank,
-  row_number() over(order by revenue desc) as row_number,
   store_location, revnue
 from store_revenue;
